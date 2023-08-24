@@ -1,8 +1,13 @@
-definir y explicar detalladamente  la estructura de un proyecto que usa la arquitectura exagonal y DDD en Laravel, debe ser desde como crear el proyeto, con ejemplo del ingreso de productos
+definir y explicar detalladamente  la estructura de un proyecto que usa la arquitectura exagonal y DDD en Laravel,
+debe ser desde como crear el proyeto, con ejemplo del ingreso de productos
 
 
 
-Crear un proyecto utilizando la arquitectura hexagonal (también conocida como arquitectura de puertos y adaptadores) y el Domain-Driven Design (DDD) en Laravel implica seguir un enfoque de diseño que promueve la separación de preocupaciones, la escalabilidad y la mantenibilidad del código. La arquitectura hexagonal se centra en aislar el núcleo de la lógica de dominio del resto de la aplicación, mientras que el DDD se concentra en modelar el dominio de manera rica y comprensible.
+Crear un proyecto utilizando la arquitectura hexagonal (también conocida como arquitectura de puertos y adaptadores)
+y el Domain-Driven Design (DDD) en Laravel implica seguir un enfoque de diseño que promueve la separación
+de preocupaciones, la escalabilidad y la mantenibilidad del código. La arquitectura hexagonal se centra
+en aislar el núcleo de la lógica de dominio del resto de la aplicación, mientras que el DDD se concentra
+en modelar el dominio de manera rica y comprensible.
 
 Aquí tienes los pasos detallados para crear un proyecto con esta arquitectura en mente, junto con un ejemplo de cómo se podría implementar la funcionalidad de ingreso de productos.
 
@@ -133,10 +138,10 @@ class ProductController extends Controller
 }
 ```
 
-Con esta estructura, has implementado una arquitectura hexagonal y DDD en Laravel. 
-La lógica de dominio está completamente separada de los detalles técnicos y la infraestructura. 
-Ahora puedes usar rutas y controladores de Laravel para interactuar con tus casos de uso y 
+Con esta estructura, has implementado una arquitectura hexagonal y DDD en Laravel.
+La lógica de dominio está completamente separada de los detalles técnicos y la infraestructura.
+Ahora puedes usar rutas y controladores de Laravel para interactuar con tus casos de uso y
 modelar el dominio de manera efectiva.
 
-Recuerda que esta es una estructura básica y que un proyecto real podría tener más capas, 
+Recuerda que esta es una estructura básica y que un proyecto real podría tener más capas,
 abstracciones y detalles específicos de tu negocio.
