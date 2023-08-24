@@ -1,0 +1,44 @@
+La arquitectura hexagonal y el DDD (Domain Driven Design) son dos
+conceptos que se pueden aplicar en un proyecto Laravel para mejorar la calidad,
+la mantenibilidad y la escalabilidad del código. A continuación,
+te explicaré brevemente en qué consisten y cómo se estructura un proyecto que los usa.
+
+La arquitectura hexagonal o de puertos y adaptadores es una forma de diseñar el software por capas,
+de modo que se separe la lógica de negocio (el dominio) de los detalles de implementación (la infraestructura).
+La idea es que el dominio sea el centro de la aplicación y que no dependa de nada externo, como bases de datos,
+servicios web, interfaces de usuario, etc. Estos elementos externos se comunican con el
+dominio a través de unos contratos llamados puertos, que definen las operaciones que se pueden
+realizar sobre el dominio. Los puertos son implementados por unos componentes llamados adaptadores,
+que son los encargados de traducir las peticiones y respuestas entre el dominio y la infraestructura.
+De esta forma, se logra una alta cohesión y un bajo acoplamiento entre las capas, lo que facilita el desarrollo,
+el testing y el cambio de tecnologías.
+
+El DDD o diseño guiado por el dominio es una metodología que se enfoca en modelar el dominio
+de la aplicación de forma que refleje fielmente la realidad del negocio y sus reglas.
+El DDD propone una serie de conceptos y patrones para facilitar este modelado,
+como por ejemplo: entidades, value objects, agregados, servicios de dominio, repositorios, factories, etc. El DDD también sugiere una forma de organizar el código en base a los contextos delimitados (bounded contexts), que son las áreas funcionales del negocio que tienen un lenguaje y un modelo propios².
+
+Un proyecto Laravel que usa la arquitectura hexagonal y el DDD se puede estructurar de la siguiente forma:
+
+- **app**: Esta carpeta contiene las tres capas principales de la arquitectura hexagonal: Dominio, Aplicación e Infraestructura.
+    - **Domain**: Esta carpeta contiene el código del dominio, organizado por contextos delimitados. Cada contexto tiene sus propias entidades, value objects, servicios de dominio, etc. También tiene sus propios puertos, que son las interfaces que definen las operaciones que se pueden realizar sobre el dominio.
+    - **Application**: Esta carpeta contiene el código de la capa de aplicación, que es la responsable de coordinar las acciones entre el dominio y la infraestructura. Aquí se encuentran los casos de uso, que son las clases que implementan la lógica de negocio y usan los puertos del dominio para interactuar con él.
+    - **Infrastructure**: Esta carpeta contiene el código de la capa de infraestructura, que es la encargada de proveer los detalles técnicos necesarios para ejecutar la aplicación. Aquí se encuentran los adaptadores, que son las clases que implementan los puertos del dominio usando tecnologías específicas, como Laravel, MySQL, Postman, etc. También se encuentran otros elementos propios de Laravel, como los controladores, las rutas, las vistas, etc.
+- **config**: Esta carpeta contiene los archivos de configuración de Laravel y otras librerías.
+- **database**: Esta carpeta contiene los archivos relacionados con la base de datos, como las migraciones y los seeders.
+- **public**: Esta carpeta contiene los archivos públicos de la aplicación, como los assets (css, js, imágenes), el index.php y el .htaccess.
+- **resources**: Esta carpeta contiene los archivos de recursos de la aplicación, como las vistas (blade), las traducciones (lang) y los assets sin compilar (sass, js).
+- **routes**: Esta carpeta contiene los archivos de rutas de Laravel, que definen las URLs y los controladores que se invocan para cada petición.
+- **storage**: Esta carpeta contiene los archivos generados por la aplicación, como los logs, las sesiones y los caches.
+- **tests**: Esta carpeta contiene los archivos de pruebas unitarias y de integración de la aplicación.
+
+Espero haberte ayudado a entender mejor la arquitectura hexagonal y el DDD en Laravel. Si quieres profundizar más en estos temas, te recomiendo revisar algunos cursos online como [Introducción arquitectura hexagonal y DDD básico en Laravel](^1^), [Arquitectura avanzada en Laravel con DDD para proyectos escalables](^3^) o [Arquitectura Hexagonal Laravel](^5^). También puedes consultar algunos repositorios de GitHub como [ddd-hexagonal-architecture-laravel](^2^) o [¿Es Laravel un aliado de software mantenible de gran escala?](^4^).
+
+Origen: Conversación con Bing, 24/8/2023
+(1) Introducción arquitectura hexagonal y DDD básico en Laravel. https://www.udemy.com/course/introduccion-arquitectura-hexagonal-y-ddd-basico-en-laravel/.
+(2) ArielMejiaDev/ddd-hexagonal-architecture-laravel - GitHub. https://github.com/ArielMejiaDev/ddd-hexagonal-architecture-laravel.
+(3) Introducción arquitectura hexagonal y DDD básico en Laravel. https://www.udemy.com/course/introduccion-arquitectura-hexagonal-y-ddd-basico-en-laravel/.
+(4) Arquitectura avanzada en Laravel con DDD para proyectos escalables. https://www.cursosdesarrolloweb.es/course/arquitectura-avanzada-en-laravel-con-ddd-para-proyectos-escalables.
+(5) Arquitectura Hexagonal Laravel - Cursosdesarrolloweb. https://www.cursosdesarrolloweb.es/course/arquitectura-hexagonal-laravel.
+(6) ArielMejiaDev/ddd-hexagonal-architecture-laravel - GitHub. https://github.com/ArielMejiaDev/ddd-hexagonal-architecture-laravel.
+(7) ¿Es Laravel un aliado de software mantenible de gran escala?. https://dev.to/javleds/es-laravel-un-aliado-de-software-mantenible-de-gran-escala-5cjd.
