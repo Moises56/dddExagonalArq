@@ -167,4 +167,6 @@ class BibliotecaController extends Controller {
 }
 ```
 
-**¡Listo!** Ahora tienes una estructura básica que refleja la arquitectura hexagonal en un proyecto Laravel. Puedes comenzar a completar cada clase con la lógica y la implementación adecuadas según tus necesidades. Ten en cuenta que este es solo un ejemplo de cómo podrías organizar tu proyecto, y en un escenario real, deberás manejar la validación, la gestión de bases de datos y otros aspectos importantes.
+**¡Listo!** Ahora tienes una estructura básica que refleja l
+a arquitectura hexagonal en un proyecto Laravel. Puedes comenzar a 
+completar cada clase con la lógica y la implementación adecuadas según tus necesidades. Ten en cuenta que este es solo un ejemplo de cómo podrías organizar tu proyecto, y en un escenario real, deberás manejar la validación, la gestión de bases de datos y otros aspectos importantes.
