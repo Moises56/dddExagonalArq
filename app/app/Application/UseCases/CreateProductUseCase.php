@@ -1,20 +1,21 @@
 <?php
-namespace App\Application\UseCases;
+namespace App\Application\UseCases; // Ruta de la clase
 
-use App\Domain\Repositories\ProductRepository;
+use App\Domain\Repositories\ProductRepository; // Importación de la clase ProductRepository
 
 class CreateProductUseCase // Caso de uso para crear un nuevo producto
 {
-    protected $productRepository; // Repositorio de productos
+    protected $productRepository; // Repositorio de productos-almacena una instancia de ProductRepository
 
     public function __construct(ProductRepository $productRepository) // Inyección de dependencias
     {
-        $this->productRepository = $productRepository; // Asignación de dependencias
+        $this->productRepository = $productRepository; // Asignación de dependencias - asegura que la clase tenga acceso a un repositorio
     }
 
     public function execute(array $data) // Ejecución del caso de uso
     {
-        return $this->productRepository->create($data); // Creación de un nuevo producto
+        return $this->productRepository->create($data); // funcion principal del caso de uso
+        //esto separa la logica de creacion de productos de los detalles de implementacion del repositorio
     }
 }
 
