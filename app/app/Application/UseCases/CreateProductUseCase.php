@@ -1,9 +1,9 @@
 <?php
-namespace App\Application\UseCases; // Ruta de la clase
+namespace App\Application\UseCases;
 
-use App\Domain\Repositories\ProductRepository; // Importación de la clase ProductRepository
+use App\Domain\Repositories\ProductRepository;
 
-class CreateProductUseCase // Caso de uso para crear un nuevo producto
+class CreateProductUseCase
 {
     protected $productRepository; // Repositorio de productos-almacena una instancia de ProductRepository
 
