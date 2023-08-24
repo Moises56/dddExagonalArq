@@ -133,6 +133,10 @@ class ProductController extends Controller
 }
 ```
 
-Con esta estructura, has implementado una arquitectura hexagonal y DDD en Laravel. La lógica de dominio está completamente separada de los detalles técnicos y la infraestructura. Ahora puedes usar rutas y controladores de Laravel para interactuar con tus casos de uso y modelar el dominio de manera efectiva.
+Con esta estructura, has implementado una arquitectura hexagonal y DDD en Laravel. 
+La lógica de dominio está completamente separada de los detalles técnicos y la infraestructura. 
+Ahora puedes usar rutas y controladores de Laravel para interactuar con tus casos de uso y 
+modelar el dominio de manera efectiva.
 
-Recuerda que esta es una estructura básica y que un proyecto real podría tener más capas, abstracciones y detalles específicos de tu negocio.
+Recuerda que esta es una estructura básica y que un proyecto real podría tener más capas, 
+abstracciones y detalles específicos de tu negocio.
